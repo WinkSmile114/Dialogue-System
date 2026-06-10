@@ -1,0 +1,54 @@
+{
+    "sceneId": "scene_intro",
+    "lines": [
+        {
+            "characterName": "Minister Aldren",
+            "portrait": "aldren",
+            "text": "Good morning, President. The cabinet is waiting for your address."
+        },
+        {
+            "characterName": "Minister Aldren",
+            "portrait": "aldren",
+            "text": "The economy is has beren stagnant. The pepole are restless. What will you do?"
+        },
+        {
+            "characterName": "Advisor Mira",
+            "portrait": "mira",
+            "text": "There are two paths before you. Choose wisely - both have consequences."
+        }
+    ],
+    "choices": [
+        {
+            "text": "Invest in public services to stemulate growth",
+            "conditions": [],
+            "effects": [
+                { "stat": "EconomyHealth", "Value": 15 },
+                { "stat": "PoorSupport", "Value": 10 },
+                { "stat": "RichSupport", "Value": -5 }
+            ],
+            "nextScene": "scene_public_investment"
+        },
+        {
+            "text": "Cut taxes and deregulate to attract business.",
+            "conditions": [],
+            "effects": [
+                { "stat": "EconomyHealth", "Value": 10 },
+                { "stat": "RichSupport", "Value": -10 },
+                { "stat": "RichSupport", "Value": 15 }
+            ],
+            "nextScene": "scene_deregulation"
+        },
+        {
+            "text": "[Economists Only] Propose a balanced mixed-economy reform.",
+            "conditions": [
+                { "stat": "EconomyAlignment", "comparison": "between", "valueA": -20, "valueB": 20 }
+            ],
+            "effects": [
+                { "stat": "EconomyHealth", "value": 20 },
+                { "stat": "LeftRelation", "value": 5 },
+                { "stat": "RightRelation", "value": 5 }
+            ],
+            "nextScene": "scene_mixed_reform"
+        }
+    ]
+}
