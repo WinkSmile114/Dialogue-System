@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
     // Public Methods
     public void StartDialogue(string sceneId)
     {
-        string path = "DialogueScenes/" = sceneId;
+        string path = "DialogueScenes/" + sceneId;
 
         TextAsset jsonFile = Resources.Load<TextAsset>(path);
 
@@ -55,8 +55,8 @@ public class DialogueManager : MonoBehaviour
         isShowingChoices = false;
         IsDialogueActive = true;
 
-        dialogueUI.showDialoguePanel(true);
-        dialogueUI.showChoicePanel(false);
+        dialogueUI.ShowDialoguePanel(true);
+        dialogueUI.ShowChoicePanel(false);
 
         DisplayCurrentLine();
     }
@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void OnChoiceSelected(DialogueChoice choice)
+    public void HandleChoiceSelected(DialogueChoice choice)
     {
         foreach (DialogueEffect effect in choice.effects)
         {
