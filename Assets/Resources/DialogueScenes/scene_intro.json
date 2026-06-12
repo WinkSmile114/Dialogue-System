@@ -22,9 +22,9 @@
             "text": "Invest in public services to stemulate growth",
             "conditions": [],
             "effects": [
-                { "stat": "EconomyHealth", "Value": 15 },
-                { "stat": "PoorSupport", "Value": 10 },
-                { "stat": "RichSupport", "Value": -5 }
+                { "stat": "EconomyHealth", "value": 15 },
+                { "stat": "PoorSupport", "value": 10 },
+                { "stat": "RichSupport", "value": -5 }
             ],
             "nextScene": "scene_public_investment"
         },
@@ -32,9 +32,9 @@
             "text": "Cut taxes and deregulate to attract business.",
             "conditions": [],
             "effects": [
-                { "stat": "EconomyHealth", "Value": 10 },
-                { "stat": "RichSupport", "Value": -10 },
-                { "stat": "RichSupport", "Value": 15 }
+                { "stat": "EconomyHealth", "value": 10 },
+                { "stat": "RichSupport", "value": 15 },
+                { "stat": "LeftSupport", "value": -10 }
             ],
             "nextScene": "scene_deregulation"
         },
